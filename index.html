@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map Navigation</title>
+
+    <!-- Leaflet CSS & JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 250px;
+            background-color: #f8f9fa;
+            border-left: 2px solid #ddd;
+            overflow-y: auto; /* Makes it scrollable */
+            padding: 20px;
+            height: 100vh; /* Full height */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        nav ul li a:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Main Content Area */
+        .main-container {
+            flex: 1; /* Takes remaining space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Map Styling */
+        #map {
+            width: 90%;
+            height: 500px;
+            margin-top: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Additional content styling */
+        .content {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <h1>Explore the World</h1>
+        <p>Click on a city to explore its details.</p>
+
+        <!-- Embedded Map -->
+        <div id="map"></div>
+
+        <!-- Additional Content -->
+        <h2>About Our Dataset</h2>
+        <p>We studied more than 80 cities around the world of different koppen climate zones and suggest you the BEST plant selection for urban landscape!</p>
+        <div>SWA Urban Tree Climate Adaptation Research | Check more information at our <a href="https://docs.google.com/spreadsheets/d/1918mUgJBiQLsl8hfhi-INKisyAFsDFQ3W33IbwDX56M/edit?gid=1523687460#gid=1523687460">Dataset </a>.</div>
+            
+            
+    </div>
+
+
+    <!-- Scrollable Navigation Sidebar -->
+    <nav>
+        <h3>City Navigation</h3>
+        <ul id="city-list">
+            <li><a href="index.html">Home</a></li>
+
+        </ul>
+    </nav>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([20, 0], 2); 
+
+        // Add a tile layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // List of cities
+        var cities = [
+
+            { name: "Pittsburgh", lat: 40.4406, lon: -79.9959, url: "pittsburgh.html" },
+            { name: "Kansas City", lat: 39.099724, lon: -94.578331, url: "kansas_city.html" } 
+
+            // Add more cities as needed
+        ];
+
+        // Add markers for each city
+        cities.forEach(city => {
+            L.marker([city.lat, city.lon])
+                .addTo(map)
+                .bindTooltip(city.name, { permanent: true, direction: "right" }) // Show city names
+                .bindPopup(`<b>${city.name}</b><br><a href="${city.url}">View Details</a>`)
+                .on('click', function () {
+                    window.location.href = city.url; // Redirect on click
+                });
+
+            // Add city to the navigation menu dynamically
+            var cityList = document.getElementById("city-list");
+            var cityItem = document.createElement("li");
+            var cityLink = document.createElement("a");
+            cityLink.href = city.url;
+            cityLink.textContent = city.name;
+            cityItem.appendChild(cityLink);
+            cityList.appendChild(cityItem);
+        });
+    </script>
+
+
+</body>
+</html>

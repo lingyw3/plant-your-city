@@ -1,0 +1,179 @@
+
+footer {
+    text-align: center;
+    color: #60200d;
+    font-size: 20px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    width: 100%;
+}
+
+div {
+    text-align: center;
+    margin: 20px;
+}
+/*layout version 1 of 2*10 column
+/* .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    /* gap: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.species-name {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.species-image img {
+    width: 400px;  
+    /* height: 400px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    display: block;
+    margin-left: auto; 
+} */ 
+
+/*layout version 2 of 2*5 column*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.species-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-size: 30px;
+}
+
+.species-card img {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+
+
+/* 
+.info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    color: #000000;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #f2d9d9;
+    display: inline-block; 
+    border-radius: 5px;
+}
+
+.info div{
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #f2d9d9;
+    display: inline-block; 
+    border-radius: 5px;
+}
+
+.info h3 {
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #f2d9d9;
+    display: inline-block;
+    border-radius: 5px;
+}
+.info h2 {
+    color: brown;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #f2d9d9;
+    display: inline-block; 
+    border-radius: 5px;
+} */
+
+/* Ensure everything inside .info is centered and properly spaced */
+.info {
+    text-align: center;
+    max-width: 800px; /* Keeps content compact */
+    margin: 0 auto; /* Centers the section */
+}
+
+/* H2 - Largest text size */
+.info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    background-color: rgb(15, 15, 12);
+    display: block; /* Forces new line */
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px auto; /* Ensures spacing and centers */
+    width: fit-content; /* Ensures background only wraps around text */
+}
+
+/* H3 - Medium text size */
+.info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: white;
+    display: block; /* Forces new line */
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+/* Div - Smallest text size */
+.info div {
+    font-size: 20px;
+    background-color: rgb(233, 223, 223);
+    display: block; /* Forces each div onto a new line */
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin: 8px auto;
+    width: fit-content; /* Prevents full-width stretching */
+}
+
+/* Extra spacing for UHI data */
+.info .UHI div {
+    margin: 5px auto;
+}
+
+/* H1 - Largest text size */
+.info h1 {
+    font-size: 32px;
+    font-weight: bold;
+    background-color: white;
+    display: block; /* Forces new line */
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px auto; /* Ensures spacing and centers */
+    width: fit-content; /* Ensures background only wraps around text */
+}
+
+h2 {
+    color: #cb4a22;
+}
