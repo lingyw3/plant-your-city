@@ -6,194 +6,85 @@
     <link rel="stylesheet" href="html5reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pittsburgh</title>
-    <style>
-        body {
-            background-image: url('images/pittsburgh_background.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            background-attachment: fixed;
-            height: 100vh; width: 100vw;
-        }
-    </style>
 </head>
-<!-- <body
-    style="background-image: url('images/pittsburgh_background.jpg'); 
-             background-size: cover; 
-             background-position: center; 
-             background-repeat: no-repeat; 
-             background-attachment: fixed;
-             height: 100vh; width: 100vw;"> -->
-
-</body>
-
+<body>
+    <div class="background-overlay"></div>
 
     <header>
-            <a href = "https://lingyw3.github.io/client_project_html_w25/index.html">Skip to Main Content</a>
-        <nav>
-            <ul>
-                <li><a href = "index.html">World Map Navigation</a></li>
-
-            </ul>
+        <a href="#main-content" class="skip-link">Skip to Main Content</a>
+        <nav class="city-navbar">
+            <div class="nav-left">
+                <a href="index.html">World Map Navigation</a>
+            </div>
+            <div class="nav-center">
+                <span class="nav-city-name">Pittsburgh</span>
+            </div>
+            <div class="nav-right">
+                <a href="#koppen-climate">Koppen Climate Zone</a>
+                <a href="#city-details">City Details</a>
+                <a href="#city-plants">City Plants</a>
+            </div>
         </nav>
-
         
-
-
     </header>
-    <main>
-        
-        <div class="info">
-            <h1>How could Urban Trees adapt to climate change?</h1>
-            <h1>Check the PLANTS Better for YOUR CITY in 2100!</h1>
-            <h2>Pittsburgh</h2>
-            <div class="population">302,898 people living here.</div>
-            <h3>Now: Dfa</h3>
-            <div class="climate">
-                Hot summer humid continental: four distinct seasons, large seasonal temperature differences. 
-                Warm to hot (often humid) summers, freezing winters. Even precipitation throughout the year, can have dry season.
-            </div>
 
-        
-            <h3>2100: Cfa</h3>
-            <div class="climate">
-                Humid subtropical: hot, humid summers / cool to mild winters - no permanent snow cover. 
-                Can be monsoon-influenced or have uniform / varying rainfall.
-            </div>
-
-        
-            <div class="UHI">
-                <div>Average SUHI daytime: 0.89</div>
-                <div>Average SUHI nighttime: 0.36</div>
-            </div>
-        
-            <h3>Similar to: Nashville</h3>
-            <h3>Suggest Urban Plants:</h3>
-        </div>
-        
+    <main id="main-content" class="main-content">
 
 
-            <!-- names of species -->
-            <!-- <ul>
-                <li>Cercis canadensis</li>
-                <li>Acer saccharum</li>
-                <li>Magnolia grandiflora</li>
-                <li>Liriodendron tulipifera</li>
-                <li>Platanus occidentalis</li>
-                <li>Juglans nigra</li>
-                <li>Cornus florida</li>
-                <li>Acer rubrum</li>
-                <li>Pinus strobus</li>
-                <li>Quercus alba</li>
-            </ul> -->
-
-            <!--version 1 of 2*5columns-->
-            <!-- <div class="grid-container">
-                <div class="species-name">Cercis canadensis</div>
-                <div class="species-image">
-                    <img src="images/cercis_canadensis.jpg" alt="Cercis canadensis">
-                </div>
-    
-                <div class="species-name">Acer saccharum</div>
-                <div class="species-image">
-                    <img src="images/acer_saccharum.jpg" alt="Acer saccharum">
-                </div>
-    
-                <div class="species-name">Magnolia grandiflora</div>
-                <div class="species-image">
-                    <img src="images/magnolia_grandiflora.jpg" alt="Magnolia grandiflora">
-                </div>
-    
-                <div class="species-name">Liriodendron tulipifera</div>
-                <div class="species-image">
-                    <img src="images/liriodendron_tulipifera.jpg" alt="Liriodendron tulipifera">
-                </div>
-    
-                <div class="species-name">Platanus occidentalis</div>
-                <div class="species-image">
-                    <img src="images/platanus_occidentalis.jpg" alt="Platanus occidentalis">
-                </div>
-    
-                <div class="species-name">Juglans nigra</div>
-                <div class="species-image">
-                    <img src="images/juglans_nigra.jpg" alt="Juglans nigra">
-                </div>
-    
-                <div class="species-name">Cornus florida</div>
-                <div class="species-image">
-                    <img src="images/cornus_florida.jpg" alt="Cornus florida">
-                </div>
-    
-                <div class="species-name">Acer rubrum</div>
-                <div class="species-image">
-                    <img src="images/acer_rubrum.jpg" alt="Acer rubrum">
-                </div>
-    
-                <div class="species-name">Pinus strobus</div>
-                <div class="species-image">
-                    <img src="images/pinus_strobus.jpg" alt="Pinus strobus">
-                </div>
-    
-                <div class="species-name">Quercus alba</div>
-                <div class="species-image">
-                    <img src="images/quercus_alba.jpg" alt="Quercus alba">
-                </div>
-            </div>
-        </div> -->
-
-        <!--version 2 of 2*5columns-->
-        <div class="grid-container">
-            <div class="species-card">
-                <img src="images/cercis_canadensis.jpg" alt="Cercis canadensis">
-                <p><b>Cercis canadensis</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/acer_saccharum.jpg" alt="Acer saccharum">
-                <p><b>Acer saccharum</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/magnolia_grandiflora.jpg" alt="Magnolia grandiflora">
-                <p><b>Magnolia grandiflora</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/liriodendron_tulipifera.jpg" alt="Liriodendron tulipifera">
-                <p><b>Liriodendron tulipifera</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/platanus_occidentalis.jpg" alt="Platanus occidentalis">
-                <p><b>Platanus occidentalis</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/juglans_nigra.jpg" alt="Juglans nigra">
-                <p><b>Juglans nigra</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/cornus_florida.jpg" alt="Cornus florida">
-                <p><b>Cornus florida</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/acer_rubrum.jpg" alt="Acer rubrum">
-                <p><b>Acer rubrum</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/pinus_strobus.jpg" alt="Pinus strobus">
-                <p><b>Pinus strobus</b></p>
-            </div>
-            <div class="species-card">
-                <img src="images/quercus_alba.jpg" alt="Quercus alba">
-                <p><b>Quercus alba</b></p>
-            </div>
-        </div>
 
 
-        <div>Check more information at our <a href="https://docs.google.com/spreadsheets/d/1918mUgJBiQLsl8hfhi-INKisyAFsDFQ3W33IbwDX56M/edit?gid=1523687460#gid=1523687460">Dataset </a>.</div>
-            
+        <!-- Section 1: Climate Zone -->
+        <section id="koppen-climate">
+            <div class="climate-grid">
+                <div class="climate-box">
+                    <h3>Now: Dfa</h3>
+                    <p>Hot summer humid continental: four distinct seasons, large seasonal temperature differences. Warm to hot (often humid) summers, freezing winters. Even precipitation throughout the year, can have dry season.</p>
+                </div>
+                <div class="climate-box">
+                    <h3>2100: Cfa</h3>
+                    <p>Humid subtropical: hot, humid summers / cool to mild winters - no permanent snow cover. Can be monsoon-influenced or have uniform / varying rainfall.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: City Details -->
+        <section id="city-details" class="center-box">
+            <p><strong>302,898</strong> people living here.</p>
+            <p><strong>Average SUHI daytime:</strong> 0.89</p>
+            <p><strong>Average SUHI nighttime:</strong> 0.36</p>
+            <p><strong>Similar to:</strong> Nashville</p>
+        </section>
+
+        <!-- Section 3: City Plants -->
+        <section id="city-plants">
+            <div class="section-heading-wrapper">
+                <h3 class="section-heading">Suggested Urban Plants</h3>
+            </div>
+            <div class="grid-container">
+                <div class="species-card"><img src="images/cercis_canadensis.jpg" alt="Cercis canadensis"><p><b>Cercis canadensis</b></p></div>
+                <div class="species-card"><img src="images/acer_saccharum.jpg" alt="Acer saccharum"><p><b>Acer saccharum</b></p></div>
+                <div class="species-card"><img src="images/magnolia_grandiflora.jpg" alt="Magnolia grandiflora"><p><b>Magnolia grandiflora</b></p></div>
+                <div class="species-card"><img src="images/liriodendron_tulipifera.jpg" alt="Liriodendron tulipifera"><p><b>Liriodendron tulipifera</b></p></div>
+                <div class="species-card"><img src="images/platanus_occidentalis.jpg" alt="Platanus occidentalis"><p><b>Platanus occidentalis</b></p></div>
+                <div class="species-card"><img src="images/juglans_nigra.jpg" alt="Juglans nigra"><p><b>Juglans nigra</b></p></div>
+                <div class="species-card"><img src="images/cornus_florida.jpg" alt="Cornus florida"><p><b>Cornus florida</b></p></div>
+                <div class="species-card"><img src="images/acer_rubrum.jpg" alt="Acer rubrum"><p><b>Acer rubrum</b></p></div>
+                <div class="species-card"><img src="images/pinus_strobus.jpg" alt="Pinus strobus"><p><b>Pinus strobus</b></p></div>
+                <div class="species-card"><img src="images/quercus_alba.jpg" alt="Quercus alba"><p><b>Quercus alba</b></p></div>
+            </div>
+        </section>
+
+
 
     </main>
-    <footer>
-        <p>SWA Urban Tree Climate Adaptation | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
-    </footer>
-    
-</body>
 
+
+    <footer class="site-footer">
+        <p>SWA Urban Tree Climate Adaptation | <a href="https://seas.umich.edu/">SEAS</a></p>
+        <p>Check more information at our <a href="https://docs.google.com/spreadsheets/d/1918mUgJBiQLsl8hfhi-INKisyAFsDFQ3W33IbwDX56M/edit?gid=1523687460#gid=1523687460">Dataset</a>.</p>
+    </footer>
+      
+          
+
+</body>
 </html>
