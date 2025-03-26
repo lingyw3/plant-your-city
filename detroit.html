@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Detroit</title>
+    <style>
+        .background-overlay {
+            background-image: url('images/detroit_background.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header>
+        <a href="#main-content" class="skip-link">Skip to Main Content</a>
+        <nav class="city-navbar">
+            <div class="nav-left">
+                <a href="index.html">World Map Navigation</a>
+            </div>
+            <div class="nav-center">
+                <span class="nav-city-name">Detroit</span>
+            </div>
+            <div class="nav-right">
+                <a href="#koppen-climate">Koppen Climate Zone</a>
+                <a href="#city-details">City Details</a>
+                <a href="#city-plants">City Plants</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
+
+        <!-- Section 1: Climate Zone -->
+        <section id="koppen-climate">
+            <div class="climate-grid">
+                <div class="climate-box">
+                    <h3>Now: Dfa</h3>
+                    <p>Dfa - hot summer humid continental: four distinct seasons, large seasonal temperature differences. Warm to hot (often humid) summers, freezing winters. Even precipitation throughout the year, can have dry season.</p>
+                </div>
+                <div class="climate-box">
+                    <h3>2100: Cfa</h3>
+                    <p>Humid Subtropical (Cfa) - Warm summers, mild winters, and rainfall distributed throughout the year.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: City Details -->
+        <section id="city-details" class="center-box">
+            <p><strong>620,376</strong> people living here.</p>
+            <p><strong>Average SUHI daytime:</strong> 0.79</p>
+            <p><strong>Average SUHI nighttime:</strong> 0.18</p>
+            <p><strong>Similar to:</strong> <span style="color:#ca4117; font-weight: bold; font-size:x-large;">Philadelphia</span></p>
+        </section>
+
+        <!-- Section 3: City Plants -->
+        <section id="city-plants">
+            <div class="section-heading-wrapper">
+                <h3 class="section-heading">Suggested Urban Plants</h3>
+            </div>
+            <div class="grid-container">
+                <div class="species-card"><img src="images/platanus_x_acerifolia.jpg" alt="Platanus x acerifolia"><p><b>Platanus x acerifolia</b></p></div>
+                <div class="species-card"><img src="images/acer_rubrum.jpg" alt="Acer Rubrum"><p><b>Acer Rubrum</b></p></div>
+                <div class="species-card"><img src="images/prunus_species.jpg" alt="Prunus species"><p><b>Prunus species</b></p></div>
+                <div class="species-card"><img src="images/pyrus_calleryana.jpg" alt="Pyrus calleryana"><p><b>Pyrus calleryana</b></p></div>
+                <div class="species-card"><img src="images/gleditsia_triacanthos.jpg" alt="Gleditsia triacanthos"><p><b>Gleditsia triacanthos</b></p></div>
+                <div class="species-card"><img src="images/quercus_rubra.jpg" alt="Quercus rubra"><p><b>Quercus rubra</b></p></div>
+                <div class="species-card"><img src="images/zelkova_serrata.jpg" alt="Zelkova serrata"><p><b>Zelkova serrata</b></p></div>
+                <div class="species-card"><img src="images/acer_platanoides.jpg" alt="Acer platanoides"><p><b>Acer platanoides</b></p></div>
+                <div class="species-card"><img src="images/syringa_reticulata.jpg" alt="Syringa reticulata"><p><b>Syringa reticulata</b></p></div>
+                <div class="species-card"><img src="images/ginkgo_biloba.jpg" alt="Ginkgo biloba"><p><b>Ginkgo biloba</b></p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>SWA Urban Tree Climate Adaptation | <a href="https://seas.umich.edu/">SEAS</a></p>
+        <p>Check more information at our <a href="https://docs.google.com/spreadsheets/d/1918mUgJBiQLsl8hfhi-INKisyAFsDFQ3W33IbwDX56M/edit?gid=1523687460#gid=1523687460">Dataset</a>.</p>
+    </footer>
+</body>
+</html>

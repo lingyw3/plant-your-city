@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Seattle</title>
+    <style>
+        .background-overlay {
+            background-image: url('images/seattle_background.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header>
+        <a href="#main-content" class="skip-link">Skip to Main Content</a>
+        <nav class="city-navbar">
+            <div class="nav-left">
+                <a href="index.html">World Map Navigation</a>
+            </div>
+            <div class="nav-center">
+                <span class="nav-city-name">Seattle</span>
+            </div>
+            <div class="nav-right">
+                <a href="#koppen-climate">Koppen Climate Zone</a>
+                <a href="#city-details">City Details</a>
+                <a href="#city-plants">City Plants</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-content">
+
+        <!-- Section 1: Climate Zone -->
+        <section id="koppen-climate">
+            <div class="climate-grid">
+                <div class="climate-box">
+                    <h3>Now: Csb</h3>
+                    <p>Csb - warm summer mediterranean: warm (not hot), dry summers, never above 72°F, cool ocean currents, upwelling, higher latitudes --> cool.</p>
+                </div>
+                <div class="climate-box">
+                    <h3>2100: Csb</h3>
+                    <p>Csb - warm summer mediterranean: warm (not hot), dry summers, never above 72°F, cool ocean currents, upwelling, higher latitudes --> cool.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: City Details -->
+        <section id="city-details" class="center-box">
+            <p><strong>749,256</strong> people living here.</p>
+            <p><strong>Average SUHI daytime:</strong> 0.75</p>
+            <p><strong>Average SUHI nighttime:</strong> 0.19</p>
+            <p><strong>Similar to:</strong> <span style="color:#ca4117; font-weight: bold; font-size:x-large;">Oakland</span></p>
+        </section>
+
+        <!-- Section 3: City Plants -->
+        <section id="city-plants">
+            <div class="section-heading-wrapper">
+                <h3 class="section-heading">Suggested Urban Plants</h3>
+            </div>
+            <div class="grid-container">
+                <div class="species-card"><img src="images/platanus_hybrida.jpg" alt="Platanus hybrida"><p><b>Platanus hybrida</b></p></div>
+                <div class="species-card"><img src="images/lagerstroemia_indica.jpg" alt="Lagerstroemia indica"><p><b>Lagerstroemia indica</b></p></div>
+                <div class="species-card"><img src="images/pyrus_calleryana.jpg" alt="Pyrus calleryana"><p><b>Pyrus calleryana</b></p></div>
+                <div class="species-card"><img src="images/liquidambar_styraciflua.jpg" alt="Liquidambar styraciflua"><p><b>Liquidambar styraciflua</b></p></div>
+                <div class="species-card"><img src="images/quercus_agrifolia.jpg" alt="Quercus agrifolia"><p><b>Quercus agrifolia</b></p></div>
+                <div class="species-card"><img src="images/prunus_cerasifera.jpg" alt="Prunus cerasifera"><p><b>Prunus cerasifera</b></p></div>
+                <div class="species-card"><img src="images/sequoia_sempervirens.jpg" alt="Sequoia sempervirens"><p><b>Sequoia sempervirens</b></p></div>
+                <div class="species-card"><img src="images/pistacia_chinensis.jpg" alt="Pistacia chinensis"><p><b>Pistacia chinensis</b></p></div>
+                <div class="species-card"><img src="images/syringa_reticulata.jpg" alt="Syringa reticulata"><p><b>Syringa reticulata</b></p></div>
+                <div class="species-card"><img src="images/ginkgo_biloba.jpg" alt="Ginkgo biloba"><p><b>Ginkgo biloba</b></p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>SWA Urban Tree Climate Adaptation | <a href="https://seas.umich.edu/">SEAS</a></p>
+        <p>Check more information at our <a href="https://docs.google.com/spreadsheets/d/1918mUgJBiQLsl8hfhi-INKisyAFsDFQ3W33IbwDX56M/edit?gid=1523687460#gid=1523687460">Dataset</a>.</p>
+    </footer>
+</body>
+</html>
