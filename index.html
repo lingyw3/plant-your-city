@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Adaptation Study for Urban Trees</title>
+  <link rel="stylesheet" href="html5reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #e9f5ec, #f9f9f9);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 60px;
+      color: #2f4f4f;
+    }
+
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin: 30px 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-wrapper {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .full-width {
+        grid-column: span 2;
+      }
+    }
+
+    .grid-card {
+      background-color: #ffffff;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+
+      /* Uniform size styling */
+      max-width: 80%;
+      width: 100%;
+      margin: 0 auto;
+      min-height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-5px);
+      background-color: #f0f8f5;
+    }
+
+    .grid-card a {
+      text-decoration: none;
+      color: #2e5d58;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: inline-block;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tools of Scaling Up Climate Adaptation through Sustainable Urban Forestry</h1>
+
+  <div class="grid-wrapper">
+    <!-- Row 1 -->
+    <div class="grid-card full-width">
+      <a href="https://koeppen-geiger.vu-wien.ac.at/" target="_blank">
+        Learn about Koppen Climate Classification
+      </a>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid-card">
+      <a href="tree_species_frequency.html">
+        Urban Tree Frequency Table
+      </a>
+    </div>
+    <div class="grid-card">
+      <a href="climate_trends_maps.html">
+        Climate Change Scenario Maps
+      </a>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="grid-card">
+      <a href="navigation.html">
+        Plant Your City Explorer
+      </a>
+    </div>
+    <div class="grid-card">
+      <a href="https://storymaps.arcgis.com/stories/7b7bc555e49b41fd84d04f870f425dd8" target="_blank">
+        Check Climate Change Story Map
+      </a>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="grid-card full-width">
+      <a href="practices.html">
+        Methods of Adapting Urban Forestry Practices
+      </a>
+    </div>
+  </div>
+</body>
+</html>

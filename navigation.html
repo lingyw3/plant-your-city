@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map Navigation</title>
+
+    <!-- Leaflet CSS & JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 250px;
+            background-color: #f8f9fa;
+            border-left: 2px solid #ddd;
+            overflow-y: auto; /* Makes it scrollable */
+            padding: 20px;
+            height: 100vh; /* Full height */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        nav ul li a:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Main Content Area */
+        .main-container {
+            flex: 1; /* Takes remaining space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Map Styling */
+        #map {
+            width: 90%;
+            height: 500px;
+            margin-top: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Additional content styling */
+        .content {
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <h1>Explore the World</h1>
+        <p>Click on a city to explore its details.</p>
+
+        <!-- Embedded Map -->
+        <div id="map"></div>
+
+        <!-- Additional Content -->
+        <h2>About Our Dataset</h2>
+        <p>We studied more than 80 cities around the world of different koppen climate zones and suggest you the BEST plant selection for urban landscape!</p>
+        <div>SWA Urban Tree Climate Adaptation Research | Check more information at our <a href="https://docs.google.com/spreadsheets/d/1918mUgJBiQLsl8hfhi-INKisyAFsDFQ3W33IbwDX56M/edit?gid=1523687460#gid=1523687460">Dataset </a>.</div>
+            
+            
+    </div>
+
+
+    <!-- Scrollable Navigation Sidebar -->
+    <nav>
+        <h3>City Navigation</h3>
+        <ul id="city-list">
+            <!-- <li><a href="index.html">Home</a></li> -->
+        </ul>
+    </nav>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([20, 0], 2); 
+
+        // Add a tile layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // List of cities with placeholder coordinates and HTML file names
+        var cities = [
+            { name: "Pittsburgh", lat: 40.4406, lon: -79.9959, url: "pittsburgh.html" },
+            { name: "Kansas City", lat: 39.099724, lon: -94.578331, url: "kansas_city.html" },
+            { name: "Dallas", lat: 32.7767, lon: -96.7970, url: "dallas.html" },
+            { name: "Detroit", lat: 42.3314, lon: -83.0458, url: "detroit.html" },
+            { name: "El Paso", lat: 31.7619, lon: -106.4850, url: "el_paso.html" },
+            { name: "Amman", lat: 31.9454, lon: 35.9284, url: "amman.html" },
+            { name: "Houston", lat: 29.7604, lon: -95.3698, url: "houston.html" },
+            { name: "Portland", lat: 45.5152, lon: -122.6784, url: "portland.html" },
+            { name: "Seattle", lat: 47.6062, lon: -122.3321, url: "seattle.html" },
+            { name: "Olympia", lat: 47.0379, lon: -122.9007, url: "olympia.html" },
+            { name: "Carson City", lat: 39.1638, lon: -119.7674, url: "carson_city.html" },
+            { name: "Salt Lake City", lat: 40.7608, lon: -111.8910, url: "salt_lake_city.html" },
+            { name: "Minneapolis", lat: 44.9778, lon: -93.2650, url: "minneapolis.html" },
+            { name: "Madison", lat: 43.0731, lon: -89.4012, url: "madison.html" },
+            { name: "Ottawa", lat: 45.4215, lon: -75.6972, url: "ottawa.html" },
+            { name: "Moscow", lat: 55.7558, lon: 37.6173, url: "moscow.html" },
+            { name: "Sapporo", lat: 43.0618, lon: 141.3545, url: "sapporo.html" },
+            { name: "St. Johns", lat: 47.5615, lon: -52.7126, url: "st_johns.html" },
+            { name: "Yekaterinburg", lat: 56.8389, lon: 60.6057, url: "yekaterinburg.html" }
+        ];
+
+        // Add markers for each city
+        cities.forEach(city => {
+            L.marker([city.lat, city.lon])
+                .addTo(map)
+                .bindTooltip(city.name, { permanent: true, direction: "right" })
+                .bindPopup(`<b>${city.name}</b><br><a href="${city.url}">View Details</a>`)
+                .on('click', function () {
+                    window.location.href = city.url;
+                });
+
+            // Add city to the navigation menu dynamically
+            var cityList = document.getElementById("city-list");
+            var cityItem = document.createElement("li");
+            var cityLink = document.createElement("a");
+            cityLink.href = city.url;
+            cityLink.textContent = city.name;
+            cityItem.appendChild(cityLink);
+            cityList.appendChild(cityItem);
+        });
+    </script>
+
+</body>
+</html>
